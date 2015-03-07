@@ -1,7 +1,7 @@
 # Hackcdmx
 
 ### Requerimientos
-Node 0.12.0
+- nodejs 0.12.0
 
 ### Instalación
 

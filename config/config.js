@@ -11,6 +11,7 @@ var NODE_ENV = process.env.NODE_ENV || 'development';
  */
 
 env.development = {
+  db: 'mongodb://localhost/hackcdmx-dev'
 };
 
 /**
@@ -18,6 +19,7 @@ env.development = {
  */
 
 env.test = {
+  db: 'mongodb://localhost/hackcdmx-test'
 }
 
 /**
@@ -25,6 +27,7 @@ env.test = {
  */
 
 env.production = {
+  db: 'mongodb://localhost/hackcdmx-prod'
 }
 
 /**
@@ -35,6 +38,9 @@ var config = env[NODE_ENV];
 config.env = NODE_ENV;
 config.root = path.resolve(__dirname, '../');
 
+/**
+ * Configuración GLOBAL
+ */
 GLOBAL.config = config;
 
 /**

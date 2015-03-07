@@ -5,6 +5,9 @@
 import logger from 'koa-logger';
 import bodyParser from 'koa-bodyparser';
 import config from './config';
+import models from '../utils/models';
+
+models();
 
 export default function (api){
   if (api.env !== 'test'){
