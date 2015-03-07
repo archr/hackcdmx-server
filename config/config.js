@@ -16,7 +16,15 @@ env.development = {
     port: 6379,
     ip: '127.0.0.1'
   },
-  seconds: 60 * 60
+  seconds: 60 * 60,
+  mailer: {
+    mandrill: {
+      apiKey: '9eYPoKpKFH8a2FiXsCz54A',
+      debug: true
+    },
+    trap: false,
+    layout: __dirname + '/../templates/email/layouts/default.jade'
+  }
 };
 
 /**
@@ -29,7 +37,15 @@ env.test = {
     port: 6379,
     ip: '127.0.0.1'
   },
-  seconds: 60 * 60
+  seconds: 60 * 60,
+  mailer: {
+    mandrill: {
+      apiKey: '9eYPoKpKFH8a2FiXsCz54A',
+      debug: true
+    },
+    trap: true,
+    layout: __dirname + '/../templates/email/layouts/default.jade'
+  }
 }
 
 /**
@@ -42,7 +58,15 @@ env.production = {
     port: 6379,
     ip: '127.0.0.1'
   },
-  seconds: 60 * 60
+  seconds: 60 * 60,
+  mailer: {
+    mandrill: {
+      apiKey: '9eYPoKpKFH8a2FiXsCz54A',
+      debug: true
+    },
+    trap: false,
+    layout: __dirname + '/../templates/email/layouts/default.jade'
+  }
 }
 
 /**

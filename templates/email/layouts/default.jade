@@ -1,0 +1,84 @@
+doctype transitional
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    style(type='text/css').
+      body, .layout-table, .layout-td {
+        height:100% !important;
+        margin:0;
+        padding:0;
+        width:100% !important;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      .layout-table {
+
+      }
+
+      .layout-td {
+        padding:20px;
+      }
+
+      .layout-inside {
+        width:600px;
+        background: #e08800;
+      }
+
+      .layout-header {
+      }
+
+      .layout-header-content {
+        color: #FFF;
+        line-height: 125%;
+        text-align: left;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+      }
+
+      .date {
+        font-size: 11px;
+      }
+
+      .body-header-wrapper {
+        background-color: #f4f4f4;
+        color: #515151;
+      }
+
+      .body-container {
+        border-bottom: 1px solid #CCC;
+      }
+
+      .body-content {
+        color: #565656;
+        font-size: 14px;
+        line-height: 150%;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        text-align: left;
+      }
+
+  body(leftmargin='0', marginwidth='0', topmargin='0', marginheight='0', offset='0', itemscope, itemtype='http://schema.org/EmailMessage')
+    center
+      table.layout-table(align='center', border='0', cellpadding='0', cellspacing='0', height='100%', width='100%')
+        tr
+          td.layout-td(align='center', valign='top')
+            table.layout-inside(border='0', cellpadding='0', cellspacing='0')
+              tr
+                td(align='center', valign='top')
+                  table.layout-header(border='0', cellpadding='0', cellspacing='0', width='100%')
+                    tr
+                      td.layout-header-content(valign='top') SECRETARÍA DE SALUD
+                      td.layout-header-content.date(valign='top', style='padding-left:0; text-align:right;', width='180') #{date}
+              tr
+                td(align='center', valign='top')
+                  table.body-header-wrapper(border='0', cellpadding='0', cellspacing='0', width='100%')
+                    tr
+                      td(align='center', valign='top')
+                        table.body-container(border='0', cellpadding='0', cellspacing='0', width='100%')
+                          tr
+                            td.body-content(valign='top')
+                              div!=body

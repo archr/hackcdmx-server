@@ -50,6 +50,10 @@ let UsuarioSchema = new Schema({
   },
   telefono: {
     type: Number
+  },
+  status: {
+    type: Number,
+    default: 1 //1: pendiente, 2: activo, 3: bloqueado
   }
 });
 
