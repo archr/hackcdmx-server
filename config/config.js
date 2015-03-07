@@ -11,7 +11,12 @@ var NODE_ENV = process.env.NODE_ENV || 'development';
  */
 
 env.development = {
-  db: 'mongodb://localhost/hackcdmx-dev'
+  db: 'mongodb://localhost/hackcdmx-dev',
+  redis: {
+    port: 6379,
+    ip: '127.0.0.1'
+  },
+  seconds: 60 * 60
 };
 
 /**
@@ -19,7 +24,12 @@ env.development = {
  */
 
 env.test = {
-  db: 'mongodb://localhost/hackcdmx-test'
+  db: 'mongodb://localhost/hackcdmx-test',
+  redis: {
+    port: 6379,
+    ip: '127.0.0.1'
+  },
+  seconds: 60 * 60
 }
 
 /**
@@ -27,7 +37,12 @@ env.test = {
  */
 
 env.production = {
-  db: 'mongodb://localhost/hackcdmx-prod'
+  db: 'mongodb://localhost/hackcdmx-prod',
+  redis: {
+    port: 6379,
+    ip: '127.0.0.1'
+  },
+  seconds: 60 * 60
 }
 
 /**

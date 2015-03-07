@@ -46,10 +46,12 @@ describe('/auth', function () {
     request(app.listen())
       .post('/auth')
       .send({email: usuario.email, password: usuario.password})
-      .expect(200, {
-        email: usuario.email,
-        nombre: usuario.nombre
-      })
-      .end(done);
+      .expect(200)
+      .end(function (err, res){
+        expect(res.body.email).equal(usuario.email)
+        expect(res.body.nombre).equal(usuario.nombre)
+        expect(res.body.token).exists;
+        done();
+      });
   });
 });

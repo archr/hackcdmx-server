@@ -1,6 +1,11 @@
 import Router from 'koa-router';
+import Token from '../lib/token';
 
 let router = new Router()
+let token = new Token({
+  redis: config.redis,
+  seconds: config.seconds
+});
 
 export default router;
 
@@ -31,8 +36,11 @@ router.post('/', function *() {
     return;
   }
 
+  let tid = yield token.generate(usuario);
+
   this.body = {
     email: usuario.email,
-    nombre: usuario.nombre
+    nombre: usuario.nombre,
+    token: tid
   };
 });
