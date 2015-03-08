@@ -1,7 +1,7 @@
 import Router from 'koa-router';
 import Token from '../lib/token';
 
-let router = new Router()
+let router = new Router();
 let token = new Token({
   redis: config.redis,
   seconds: config.seconds
