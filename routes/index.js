@@ -18,4 +18,5 @@ export default function (api) {
   api.use(mount('/hospitals', require('./hospitals').middleware()));
   api.use(mount('/profile', require('./profile').middleware()));
   api.use(mount('/hospital', require('./hospital').middleware()));
+  api.use(mount('/date', require('./date').middleware()));
 };

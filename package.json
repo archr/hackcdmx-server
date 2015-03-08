@@ -34,6 +34,7 @@
     "minimist": "^1.1.0",
     "mongoose": "^3.8.24",
     "nodemailer": "^1.3.1",
+    "rc-calendar": "^2.0.2",
     "redis": "^0.12.1",
     "underscore": "^1.8.2"
   },
