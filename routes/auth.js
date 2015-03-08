@@ -1,5 +1,6 @@
 import Router from 'koa-router';
 import Token from '../lib/token';
+import queue from '../lib/queue';
 
 let router = new Router();
 let token = new Token({
