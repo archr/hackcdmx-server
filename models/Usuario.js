@@ -55,8 +55,6 @@ let UsuarioSchema = new Schema({
     type: Number,
     default: 1 //1: pendiente, 2: activo, 3: bloqueado
   }
-}, {
-  collection: 'hospitales'
 });
 
 /**

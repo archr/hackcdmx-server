@@ -28,6 +28,12 @@ router.post('/', function *() {
     return;
   }
 
+  if (usuario.status !== 2) {
+    this.status = 401;
+    this.message = 'Usuario invalido.'
+    return;
+  }
+
   var isValidPassword = yield usuario.validatePasswordAsync(body.password);
 
   if (!isValidPassword) {
