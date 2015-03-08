@@ -20,6 +20,7 @@ let HospitalSchema = new Schema({
   NOMBRE_ESTADO: String,
   HORARIO: String,
   TELEFONO: String,
+  SUB_TIPO: String,
   location: {
     type: [Number],
     default: []
